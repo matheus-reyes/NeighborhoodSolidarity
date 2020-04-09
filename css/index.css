@@ -98,8 +98,11 @@ article {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#botao-lista{
-    margin-top:15%;
+
+.images-places{
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width:80%;
 }
 
 /* Media Querys Para Responsividade */
