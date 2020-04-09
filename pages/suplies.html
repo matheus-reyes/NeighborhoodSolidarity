@@ -1,0 +1,15 @@
+<script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+
+<script>
+  const firebaseConfig = {
+    databaseURL: "https://neighborhood-9060d.firebaseio.com/",
+  };
+
+  const defaultProject = firebase.initializeApp(firebaseConfig);
+  const defaultStorage = defaultProject.storage();
+  console.log(defaultStorage)
+  /*
+  const users = instance.database().ref('users');
+  console.log(users);
+  */
+</script>

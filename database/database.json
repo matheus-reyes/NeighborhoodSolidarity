@@ -1,0 +1,62 @@
+[
+  {
+    "users" : {
+      "01": {
+        "name": "pipipi",
+        "riskgroup": true,
+        "location": {
+          "latitude": "000",
+          "longitude": "111"
+        }
+      },
+      "02": {
+        "name": "popopo",
+        "riskgroup": true,
+        "location": {
+          "latitude": "000",
+          "longitude": "111"
+        }
+      }
+    },
+    "requests": {
+      "mogidascruzes": {
+        "01": {
+          "userrequest": "01",
+          "itens": {
+            "sabonete": 1,
+            "shampoo": 1
+          }
+        },
+        "02": {
+          
+        }
+      },
+      "saopaulo": {
+        "01": {
+
+        },
+        "02": {
+          
+        },
+        "03": {
+
+        }
+      }
+    }
+  }
+]
+
+
+const requests = firebase.com/ola/requests/saopaulo
+
+for each request in requests
+  mostrar tela request (request)
+
+mostrar tela request (request) 
+  const id = request.userrequest
+  const user = firebase.com/ola/users/id
+
+
+
+firebase.com/ola/users/
+
