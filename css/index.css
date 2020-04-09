@@ -34,7 +34,7 @@ article {
 /* Imagens da Primeira Section */
 
 .img{
-    width: 300px;
+    width: 400px;
     height: 300px;
     display: block;
 }
@@ -96,6 +96,10 @@ article {
     font-weight: bold;
     font-size:1.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#botao-lista{
+    margin-top:15%;
 }
 
 /* Media Querys Para Responsividade */
