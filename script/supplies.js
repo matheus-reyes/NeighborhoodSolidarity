@@ -5,7 +5,7 @@ navigator.geolocation.getCurrentPosition(async ({ coords }) => {
   await localStorage.setItem('longitude', coords.longitude);
 });
 
-const currentCity = 'saopaulo';
+const currentCity = 'São_Paulo';
 
 const requestsRef = firebase.database().ref(`requests/${currentCity}`);
 requestsRef.on('value', snap => { renderRequests(snap.val()) });
@@ -38,23 +38,23 @@ function getDistanceFromLatLonInMeters(position1, position2) {
 }
 
 function createCardElement(data) {
-  const row = document.createElement('div');
-  row.setAttribute('class', 'row');
+    const row = document.createElement('div');
+    row.setAttribute('class', 'row align-self-center shadow-lg p-3 mb-5 bg-white rounded centraliza');
 
     const firstCol = document.createElement('div');
     firstCol.setAttribute('class', 'col-lg-4 col-md-4 col-sm-12 col-xs-12 text');
 
-      const name = document.createElement('p');
-      name.setAttribute('class', 'body-text-p');
-      name.appendChild(document.createTextNode(data.name))
-      
-      const distance = document.createElement('p');
-      distance.setAttribute('class', 'body-text-p');
-      distance.appendChild(document.createTextNode(data.distance))
+    const name = document.createElement('p');
+    name.setAttribute('class', 'textSuplies');
+    name.appendChild(document.createTextNode("Name: " + data.name))
+    
+    const distance = document.createElement('p');
+    distance.setAttribute('class', 'textSuplies');
+    distance.appendChild(document.createTextNode("Distance: " + data.distance))
 
-      const priority = document.createElement('p');
-      priority.setAttribute('class', 'body-text-p');
-      priority.appendChild(document.createTextNode(data.priority))
+    const priority = document.createElement('p');
+    priority.setAttribute('class', 'textSuplies');
+    priority.appendChild(document.createTextNode("Priority: " + data.priority))
 
     firstCol.appendChild(name);
     firstCol.appendChild(distance);
@@ -63,10 +63,10 @@ function createCardElement(data) {
   row.appendChild(firstCol);
 
     const secondCol = document.createElement('div');
-    secondCol.setAttribute('class', 'col-lg-4 col-md-4 col-sm-12 col-xs-12 text text-center');
+    secondCol.setAttribute('class', 'col-lg-4 col-md-4 col-sm-12 col-xs-12 text');
 
       const itens = document.createElement('p');
-      itens.setAttribute('class', 'body-text-p');
+      itens.setAttribute('class', 'textSuplies');
       for(const item in data.itens) {
         itens.appendChild(document.createTextNode(`${data.itens[item]} - ${item}`));
         itens.appendChild(document.createElement('br'));
@@ -77,7 +77,7 @@ function createCardElement(data) {
   row.appendChild(secondCol);  
 
     const thridCol = document.createElement('div');
-    thridCol.setAttribute('class', 'col-lg-4 col-md-4 col-sm-12 col-xs-12 text text-right');
+    thridCol.setAttribute('class', 'centraliza');
 
       const button = document.createElement('button');
       button.setAttribute('id', 'botao-lista');

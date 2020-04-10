@@ -41,6 +41,11 @@ article {
     margin-bottom: 2rem;
 }
 
+.imgNoMargin{
+    height: 200px;
+    display: block;
+    align-self: center;
+}
 
 
 .div-botao-section{
@@ -56,6 +61,17 @@ article {
     padding: 10px 20px 10px 20px;
     background-color: #00B0FF;
     font-family: 'Baloo Da 2', cursive;
+}
+
+.botaoMargin {
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    background-color: #00B0FF;
+    font-family: 'Baloo Da 2', cursive;
+    margin-right: 30;
+    margin-left: 30;
 }
 
 
@@ -123,7 +139,6 @@ article {
     justify-content: space-around;
     text-align: center;
     align-self: center;
-    margin-top:20%;
 }
 
 #botao-lista:hover {
@@ -138,6 +153,28 @@ article {
     justify-content: space-around;
     text-align: center;
     align-self: center;
+}
+
+.centralizaBet{
+    justify-content: space-between;
+}
+
+.textSuplies{
+    font-size: 1.1rem;
+    font: sans-serif bold;
+    color: grey;
+    text-align: justify;
+    line-height: 30px;
+    font-family: 'Baloo Da 2', cursive;
+}
+.textSupliesBold{
+    font-size: 1.1rem;
+    font: sans-serif bold;
+    color: grey;
+    text-align: justify;
+    line-height: 30px;
+    font-family: 'Baloo Da 2', cursive;
+    font-weight: bold;
 }
 
 #home{
