@@ -10,12 +10,27 @@ form.onsubmit = e => {
   const adress = document.getElementById("inputAdress").value;
   const supply = document.getElementById("inputSupply").value;
   const itens = supply.replace(/[0-9\,]/g, '').split(' ').filter(item => (item.length > 2));
+
   if(itens.length === 0) {
     alert('error');
     return;
   }
 
-  dataAdress = getDataAdress(adress);
+  getDataAdress(adress).then(
+    response => {
+      setDatabase(response);
+    },
+    error => {
+      console.log(error);
+    }
+  );
+}
+
+function setDatabase(dataAdress) {
+  const supply = document.getElementById("inputSupply").value;
+  const itens = supply.replace(/[0-9\,]/g, '').split(' ').filter(item => (item.length > 2));
+
+  
   const result = dataAdress.results[0];
   const region = result.address_components[result.address_components.length - 3].short_name;
 
@@ -42,6 +57,8 @@ form.onsubmit = e => {
     itens: itensToRequest,
     userrequest: userID
   });
+
+  window.location.assign('http://localhost:5500/pages/supplies.html');
 }
 
 async function getDataAdress (input) {
@@ -49,8 +66,7 @@ async function getDataAdress (input) {
   const adress = input.replace(' ', '+');
   const response = await fetch('https://maps.googleapis.com/maps/api/geocode/json?address=' + adress + apikey)
   const data = await response.json();
-  localStorage.setItem('data', JSON.stringify(data));
-  console.log(data);
+  return data
 }
 
 

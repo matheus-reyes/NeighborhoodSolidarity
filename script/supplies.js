@@ -5,7 +5,7 @@ navigator.geolocation.getCurrentPosition(async ({ coords }) => {
   await localStorage.setItem('longitude', coords.longitude);
 });
 
-const currentCity = 'São_Paulo';
+const currentCity = 'Bragança_Paulista';
 
 const requestsRef = firebase.database().ref(`requests/${currentCity}`);
 requestsRef.on('value', snap => { renderRequests(snap.val()) });
@@ -79,11 +79,21 @@ function createCardElement(data) {
     const thridCol = document.createElement('div');
     thridCol.setAttribute('class', 'centraliza');
 
-      const button = document.createElement('button');
-      button.setAttribute('id', 'botao-lista');
-      button.appendChild(document.createTextNode('Accept Request'));
+      const a = document.createElement('a');
+      a.setAttribute('href', '../pages/acceptRequest.html');
+      
+        const buttonAccept = document.createElement('button');
+        buttonAccept.setAttribute('id', 'botao-lista');
+        buttonAccept.appendChild(document.createTextNode('Accept Request'));
 
-    thridCol.appendChild(button);
+      a.appendChild(buttonAccept)
+
+      const buttonContact = document.createElement('button');
+      buttonContact.setAttribute('id', 'botao-lista');
+      buttonContact.appendChild(document.createTextNode('Contact'));
+
+    thridCol.appendChild(a);
+    thridCol.appendChild(buttonContact);
   
   row.appendChild(thridCol);  
   
