@@ -2,6 +2,19 @@ firebase.initializeApp({ databaseURL: "https://neighborhood-9060d.firebaseio.com
 const usersRef = firebase.database().ref('/users');
 const requestsRef = firebase.database().ref('/requests');
 
+navigator.geolocation.getCurrentPosition(async ({ coords }) => { 
+  const dataAdress = await getDataAdressStreet(coords.latitude,coords.longitude);
+  const adress = dataAdress.results[0].formatted_address;
+  document.getElementById("inputAdress").value = adress;
+});
+
+async function getDataAdressStreet(lat, lng) {
+  const apikey = 'AIzaSyAmMhKrT7FzP2csp881g__Aq47mOP1uWaM';
+  const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apikey}`);
+  const data = await response.json();
+  return data
+}
+
 const form = document.querySelector('form');
 
 form.onsubmit = e => {
@@ -26,13 +39,13 @@ form.onsubmit = e => {
   );
 }
 
+
 function setDatabase(dataAdress) {
   const supply = document.getElementById("inputSupply").value;
   const itens = supply.replace(/[0-9\,]/g, '').split(' ').filter(item => (item.length > 2));
 
-  
   const result = dataAdress.results[0];
-  const region = result.address_components[result.address_components.length - 3].short_name;
+  const region = result.address_components[result.address_components.length - 4].long_name;
 
   const name = document.getElementById("inputName").value;
   const location = { latitude: result.geometry.location.lat, longitude: result.geometry.location.lng };
@@ -68,5 +81,3 @@ async function getDataAdress (input) {
   const data = await response.json();
   return data
 }
-
-

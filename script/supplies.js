@@ -3,12 +3,20 @@ firebase.initializeApp({ databaseURL: "https://neighborhood-9060d.firebaseio.com
 navigator.geolocation.getCurrentPosition(async ({ coords }) => { 
   await localStorage.setItem('latitude', coords.latitude);
   await localStorage.setItem('longitude', coords.longitude);
+  const dataAdress = await getDataAdress(coords.latitude,coords.longitude);
+  const currentCity = dataAdress.results[dataAdress.results.length - 3].address_components[0].long_name.replace(' ', '_');
+  const requestsRef = firebase.database().ref(`requests/${currentCity}`);
+  requestsRef.on('value', snap => { renderRequests(snap.val()) });
 });
 
-const currentCity = 'Bragança_Paulista';
+async function getDataAdress (lat, lng) {
+  const apikey = 'AIzaSyAmMhKrT7FzP2csp881g__Aq47mOP1uWaM';
+  const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?latlng=${lat},${lng}&key=${apikey}`);
+  const data = await response.json();
+  return data
+}
 
-const requestsRef = firebase.database().ref(`requests/${currentCity}`);
-requestsRef.on('value', snap => { renderRequests(snap.val()) });
+
 
 function getDistanceBetweenCurrentUserAndOther(position) {
   const latitude = localStorage.getItem('latitude');

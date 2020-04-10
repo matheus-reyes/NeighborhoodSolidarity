@@ -1,0 +1,45 @@
+div{
+    font-family: 'Electrolize', sans-serif;
+  }
+  .wrap {
+    width: 5%;
+    margin: 0 auto;
+  }
+  .bar {
+    background: #3d81ff;
+    width: 0;
+    margin: .10em 0;
+    color: #fff;
+    position: relative;
+    transition: width 2s, background .2s;
+    -webkit-transform: translate3d(0, 0, 0);
+    clear: both;
+  }
+  .bar:nth-of-type(odd) {
+    background: #6193ff;
+  }
+  .bar .label {
+    font-size: .55em;
+    padding: 1em;
+    background: #212121;
+    width: 5em;
+    display: inline-block;
+    position: relative;
+    z-index: 2;
+    font-weight: bold;
+  }
+  .bar .label.second {
+    background: #333;
+  }
+  .count {
+    position: absolute;
+    right: .25em;
+    top: .75em;
+    padding: .15em;
+    font-size: .75em;
+    font-weight: bold;
+  }
+
+  .titulos{
+      font-size: 18px;
+  }
