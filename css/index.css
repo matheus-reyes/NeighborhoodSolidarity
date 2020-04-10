@@ -6,20 +6,20 @@ section{
     width:100%;
 }
 
-/* Primeira Section (Imagens e Textos) */
+
 
 article {
     margin: 70px;
 }
 
-/* Títulos da Página (Títulos dos Textos e do Cadastro) */
+
 
 .titulo {
     font-family: 'Poppins', sans-serif;
     color: #6C63FF;
 }
 
-/* Texto da Primeira Section */
+
 
 .body-text-p {
     font-size: 1.1rem;
@@ -31,21 +31,25 @@ article {
     margin: 30px 0 30px 0;
 }
 
-/* Imagens da Primeira Section */
+
 
 .img{
     height: 200px;
     display: block;
     align-self: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+
+
 }
 
-/* Div que Contém os Botões da Primeira Section */
+
 
 .div-botao-section{
     margin-bottom:5%;
 }
 
-/* Botões das Sections (Textos e Formulário de Cadastro)*/
+
 
 .botao {
     color: white;
@@ -63,7 +67,7 @@ article {
     color: white;
 }
 
-/* Segunda Section */
+
 
 .form {
     background-color: white;
@@ -71,7 +75,7 @@ article {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Botão Voltar Ao Topo */
+
 
 #botaotop {
     background: #4AE894;
@@ -90,7 +94,7 @@ article {
     opacity: .5;
 }
 
-/* Seta do Botão Voltar Ao Topo */
+
 
 .setaTopo{
     font-weight: bold;
@@ -114,13 +118,18 @@ article {
 }
 
 .centraliza{
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;
     vertical-align: middle;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    align-self: center;
 }
 
-/* Media Querys Para Responsividade */
+#home{
+    width:50%;
+}
+
+
 
 @media(max-width: 1680px) {
     html{
@@ -134,7 +143,7 @@ article {
     }
 }
 
-/* BreakPoint Para Ocultar a Imagem do Banner */
+
 @media(max-width: 992px) {
     #imagem-principal {
         display: none;
