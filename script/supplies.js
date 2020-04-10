@@ -80,8 +80,7 @@ function createCardElement(data) {
     thridCol.setAttribute('class', 'col-lg-4 col-md-4 col-sm-12 col-xs-12 text text-right');
 
       const button = document.createElement('button');
-      button.setAttribute('class', 'botao');
-      button.setAttribute('id', 'botao-lista')
+      button.setAttribute('id', 'botao-lista');
       button.appendChild(document.createTextNode('Accept Request'));
 
     thridCol.appendChild(button);

@@ -39,8 +39,6 @@ article {
     align-self: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
-
-
 }
 
 
@@ -113,8 +111,24 @@ article {
     background: #c3c3c3
 }
 
-.botao-lista{
-    margin-top:20%;
+#botao-lista {
+    color: white;
+    font-size: 1.1rem;
+    border-radius: 15px;
+    padding: 10px 20px 10px 20px;
+    background-color: #00B0FF;
+    font-family: 'Baloo Da 2', cursive;
+    vertical-align: middle;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    align-self: center;
+}
+
+#botao-lista:hover {
+    background-color: rgb(96, 195, 171);
+    text-decoration: none;
+    color: white;
 }
 
 .centraliza{
@@ -126,7 +140,7 @@ article {
 }
 
 #home{
-    width:50%;
+    width:3rem;
 }
 
 
