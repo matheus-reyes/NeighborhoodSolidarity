@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header class="align-self-center shadow-sm p-3 mb-5 bg-white rounded">
+    <header class="align-self-center shadow-lg p-3 mb-5 bg-white rounded">
         <div id="container" class="container">
             <div class="row">
                 <h2 class="titulo"> Supplies </h2>
@@ -26,16 +26,16 @@
     <main>
         <!-- Primeira Section: Textos e Imagens -->
         <section>
-            <article class="align-self-center shadow-sm p-3 mb-5 bg-white rounded">
+            <article class="align-self-center shadow-lg p-3 mb-5 bg-white rounded">
                 <div class="container">
                     <div class="row">
                         <!-- Div que Contém Título "Para Nossos Professores" e seu texto -->
                         <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text">
                             <h2 class="titulo">Request Supplies</h2>
-                            <p class="body-text-p"> Help other peoples, provide supplies for others peoples.
+                            <p class="body-text-p"> Request supplies that you need and another person going to help you. 
                             </p>
                             <div class="div-botao-section">
-                                <a href="../pages/submitsupply.html" class="botao">Request</a>
+                                <a href="submitsupply.html" class="botao">Request</a>
                             </div>
                         </div>
                         <!-- Div que Contém a Imagem do Conteúdo "Para Nossos Professores" -->
@@ -48,33 +48,11 @@
         </section>
         
         <section>
-            <article class="align-self-center shadow-sm p-3 mb-5 bg-white rounded">
-                <div id="container" class="container">
-                    <div class="row">
-                        <!-- nome, prioridade, lista de itens -->
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 text">
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text">
-                                    <p class="body-text-p"> nome </p>
-                                    <p class="body-text-p"> Prioridade </p>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text text-center">
-                                    <p class="body-text-p"> 
-                                    Item 1 <br>
-                                    Item 2 <br> 
-                                    Item 3     
-                                    </p>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 text text-right">
-                                    <button id="botao-lista" class="botao"> Accept Request </button>    
-                                </div>     
-                            </div>
-                        </div>
-                        <!-- Botao de aceitar -->
-                    </div>
-                </div>
+            <article class="align-self-center shadow-lg p-3 mb-5 bg-white rounded">
+                <div id="listrequest" class="container"></div>
             </article>
         </section>
     </main>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase.js "></script>
     <script src="../script/supplies.js"></script>
 </body>

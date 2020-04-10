@@ -12,10 +12,11 @@
     <link href="../css/bootstrap.css" rel="stylesheet">
     <!-- links de fontes google (Baloo Da 2, Pangolin e Poppins)-->
     <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2|Pangolin|Poppins&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="../data.json"></script>
 </head>
 
 <body>
-    <header class="align-self-center shadow-sm p-3 mb-5 bg-white rounded">
+    <header class="align-self-center shadow-lg p-3 mb-5 bg-white rounded">
         <div id="container" class="container">
             <div class="row">
                 <h2 class="titulo"> Pharmacies </h2>
@@ -25,7 +26,7 @@
     <!-- Mainy -->
     <main>
         <section>
-            <article class="align-self-center shadow-sm p-3 mb-5 bg-white rounded">
+            <article class="align-self-center shadow-lg p-3 mb-5 bg-white rounded">
                 <div id="container" class="container">
                     <div class="row">
                         <!-- nome, prioridade, lista de itens -->
@@ -48,5 +49,12 @@
             </article>
         </section>
     </main>
+
     <script src="../script/supplies.js"></script>
+    <script>
+        var busy_hour = data;
+        // alert(busy_hour.populartimes[0].data[16])
+    </script>
+    
+    
 </body>

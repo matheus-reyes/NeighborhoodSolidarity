@@ -34,9 +34,9 @@ article {
 /* Imagens da Primeira Section */
 
 .img{
-    width: 400px;
-    height: 300px;
+    height: 200px;
     display: block;
+    align-self: center;
 }
 
 /* Div que Contém os Botões da Primeira Section */
@@ -66,7 +66,7 @@ article {
 /* Segunda Section */
 
 .form {
-    background-color: #F0F0F0;
+    background-color: white;
     border-radius: 15px;
     font-family: 'Poppins', sans-serif;
 }
@@ -103,6 +103,14 @@ article {
     margin-top: 10%;
     margin-bottom: 10%;
     width:80%;
+}
+
+.backgroundPage{
+    background: #c3c3c3
+}
+
+.botao-lista{
+    margin-top:20%;
 }
 
 /* Media Querys Para Responsividade */
