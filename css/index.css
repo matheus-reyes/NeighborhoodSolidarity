@@ -113,6 +113,13 @@ article {
     margin-top:20%;
 }
 
+.centraliza{
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    vertical-align: middle;
+}
+
 /* Media Querys Para Responsividade */
 
 @media(max-width: 1680px) {
