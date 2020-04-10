@@ -123,6 +123,7 @@ article {
     justify-content: space-around;
     text-align: center;
     align-self: center;
+    margin-top:20%;
 }
 
 #botao-lista:hover {

@@ -1,16 +1,22 @@
 firebase.initializeApp({ databaseURL: "https://neighborhood-9060d.firebaseio.com/" });
+const usersRef = firebase.database().ref('/users');
 
 const form = document.querySelector('form');
 
 const data = JSON.parse(localStorage.getItem('data'));
-console.log(data.results)
+console.log(data.results[0])
 
-/*
+
 form.onsubmit = e => {
-  const adress = document.getElementById("inputAdress").value;
-
   e.preventDefault();
-  test(adress)
+
+  const name = document.getElementById("inputName").value;
+  const adress = document.getElementById("inputAdress").value;
+  const supply = document.getElementById("inputSupply").value;
+
+  
+  console.log(name, adress, supply)
+  // test(adress)
 }
 
 
@@ -25,5 +31,3 @@ async function test (input) {
 }
 
 
-
-*/
