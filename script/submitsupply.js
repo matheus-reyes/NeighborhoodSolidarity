@@ -50,7 +50,7 @@ function setDatabase(dataAdress) {
   const name = document.getElementById("inputName").value;
   const location = { latitude: result.geometry.location.lat, longitude: result.geometry.location.lng };
   const formatedAdress = result.formatted_address;
-  const riskGroup = false;
+  const riskGroup = Math.random() >= 0.5;
 
   const user = usersRef.push({
     adress: formatedAdress,
