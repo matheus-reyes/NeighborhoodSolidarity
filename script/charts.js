@@ -1,4 +1,5 @@
-setTimeout(function start (){
+function startAnimation() {
+  setTimeout(function start (){
   
     $('.bar').each(function(i){  
       var $bar = $(this);
@@ -21,3 +22,4 @@ setTimeout(function start (){
   });
    
   }, 500)
+}
