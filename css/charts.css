@@ -43,3 +43,8 @@ div{
   .titulos{
       font-size: 18px;
   }
+
+  h2{
+    font-family: 'Electrolize', sans-serif;
+    text-align: center;
+  }

@@ -6,20 +6,14 @@ section{
     width:100%;
 }
 
-
-
 article {
     margin: 70px;
 }
-
-
 
 .titulo {
     font-family: 'Poppins', sans-serif;
     color: #6C63FF;
 }
-
-
 
 .body-text-p {
     font-size: 1.1rem;
@@ -31,7 +25,15 @@ article {
     margin: 30px 0 30px 0;
 }
 
-
+.titulo-grafico{
+    font-size: 1.7rem;
+    font: sans-serif bold;
+    color: black;
+    text-align: justify;
+    line-height: 30px;
+    font-family: 'Baloo Da 2', cursive;
+    margin: 30px 0 30px 0;
+}
 
 .img{
     height: 200px;
@@ -51,8 +53,6 @@ article {
 .div-botao-section{
     margin-bottom:5%;
 }
-
-
 
 .botao {
     color: white;
@@ -74,22 +74,17 @@ article {
     margin-left: 30;
 }
 
-
 .botao:hover {
     background-color: rgb(96, 195, 171);
     text-decoration: none;
     color: white;
 }
 
-
-
 .form {
     background-color: white;
     border-radius: 15px;
     font-family: 'Poppins', sans-serif;
 }
-
-
 
 #botaotop {
     background: #4AE894;
@@ -108,14 +103,11 @@ article {
     opacity: .5;
 }
 
-
-
 .setaTopo{
     font-weight: bold;
     font-size:1.5rem;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
-
 
 .images-places{
     margin-top: 10%;
@@ -181,8 +173,6 @@ article {
     width:3rem;
 }
 
-
-
 @media(max-width: 1680px) {
     html{
         font-size: 16px;
@@ -194,7 +184,6 @@ article {
         font-size: 13px;
     }
 }
-
 
 @media(max-width: 992px) {
     #imagem-principal {
