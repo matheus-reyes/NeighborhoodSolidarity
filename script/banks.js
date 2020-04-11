@@ -1,6 +1,6 @@
 firebase.initializeApp({ databaseURL: "https://neighborhood-9060d.firebaseio.com/" });
 
-const busyRef = firebase.database().ref('/banks');
+const busyRef = firebase.database().ref('/bank');
 busyRef.once('value', snap => {
   const places = snap.val();
   for(const place in places) {
